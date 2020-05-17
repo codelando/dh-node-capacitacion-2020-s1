@@ -1,38 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticker Wizard 🧙‍♂️</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Baloo+Paaji+2&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="/css/app.css">
-</head>
+<%- include('partials/head') %>
 <body>
-    <header>
-        <div class="container">
-            <nav class="main-nav">
-                <div class="nav-logo">
-                    <a href="/" class="logo">StickerWizard</a>
-                </div>
-                <div class="nav-menu">
-                    <a href="/">Home</a>
-                    <a href="/product">Detalle</a>
-                    <a href="/product/new">Nuevo</a>
-                    <a href="/login">Login</a>
-                    <a href="/register">Registro</a>
-                </div>
-                <div class="nav-cart">
-                    <a href="/cart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-items-qty">0</span>
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <%- include('partials/header') %>
     <main>
         <div class="container">
             <section>
@@ -75,15 +45,6 @@
             </section>
         </div>
     </main>
-    <footer>
-        <div class="container">
-            <nav class="social-nav">
-                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
-                <a href="https://dribbble.com"><i class="fab fa-dribbble"></i></a>
-            </nav>
-            <h3>&copy; 2020 codelando</h3>
-        </div>
-    </footer>
+    <%- include('partials/footer') %>
 </body>
 </html>
