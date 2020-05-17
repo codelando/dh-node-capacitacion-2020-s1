@@ -7,29 +7,35 @@ const app = express();
 // es contenido estático, es decir que no pasa por el sistema de rutas
 app.use(express.static('public'));
 
+// Configuramos EJS como motor de vistas
+app.set('view engine', 'ejs');
+// Configuramos la carpeta donde EJS buscará los archivos
+app.set('views', 'src/views');
+
+
 // Rutas
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'views/index.html'));
+    res.render('index');
 });
 
 app.get('/register', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'views/register.html'));
+    res.render('register');
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'views/login.html'));
+    res.render('login');
 });
 
 app.get('/product', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'views/productDetail.html'));
+    res.render('productDetail');
 });    
 
 app.get('/cart', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'views/productCart.html'));
+    res.render('productCart');
 });    
 
 app.get('/product/new', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'views/productAdd.html'));
+    res.render('productAdd');
 });
 
 // Iniciamos el servidor
