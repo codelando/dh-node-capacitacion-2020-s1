@@ -51,41 +51,54 @@ Luego en el archivo **package.json** creamos nuestros scripts de arranque.
   },
 ```
 
-### 2. Inicializamos Express y configuramos nuestra carpeta de recursos estáticos para imágenes y archivos de CSS / JS
+### 2. Creamos nuestro archivo **app.js** e inicializamos Express 
+
+Utilizaremos la carpeta **src** para todo el código de nuestra aplicación.
 
 ```javascript
 const express = require('express');
 const app = express();
 ```
 
+### 3. Configuramos nuestra carpeta de recursos estáticos para imágenes y archivos de CSS / JS
+
 El método static() de Express nos permite configurar una o más carpetas donde serviremos contenido estático, es decir, contenido que se mostrará directamente al cliente sin pasar por el sistema de ruteo de Node. 
+
+Utilizaremos la carpeta **public** para todo el contenido estático.
 
 ```javascript
 app.use(express.static('public'));
 ```
 
-### 3. Crear una carpeta **src** para nuestra aplicación con el archivo **app.js**
+### 4. Ubicamos nuestros archivos HTML en la carpeta **views** y creamos una ruta para cada uno
 
+Vamos a usar la librería **path** para asegurarnos que los paths funcionen sin importar el sistema operativo.
 
+```javascript
+const path = require('path');
+```
 
-En este caso usamos views
+Para las rutas usaremos **res.sendFile()**, que se encargará de hacer todo el trabajo necesario por nosotros en función de la extensión del archivo que estemos enviando al cliente. En este ejemplo será solo HTML.
+
+```javascript
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'views/index.html'));
+```
+
+### 4. Iniciamos el servidor y corremos nuestra aplicación
+
+```javascript
+app.listen(3000, () => console.log('Servidor escuchando en el puerto 3000'));
+```
+
+Para producción podemos usar:
 
 ```
-.
-├── .gitignore
-├── package.json
-├── package-lock.json
-├── public
-│   └── css
-│       └── app.css
-├── README.md
-└── src
-    ├── app.js
-    └── views
-        ├── index.html
-        ├── login.html
-        ├── productAdd.html
-        ├── productCart.html
-        ├── productDetail.html
-        └── register.html
+npm start
+```
+
+Para desarrollo podemos usar:
+
+```
+npm run startdev
 ```
