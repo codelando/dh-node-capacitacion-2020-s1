@@ -46,7 +46,7 @@ app.set('views', 'src/views');
 
 ### 2. Pasamos nuestras vistas a EJS y cambiamos **res.sendFile()** por **res.render()**
 
-Para arrancar simplemente con cambiar la extensión **.html** por **.ejs** es suficiente.
+Para arrancar simplemente con cambiar la extensión **.html** por **.ejs** es suficiente. Opcionalmente podemos crear carpetas de vistas para cada entidad: usuarios, productos, etc..
 
 Luego nos toca cambiar el método **res.sendFile()**
 
