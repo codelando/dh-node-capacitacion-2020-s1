@@ -14,17 +14,15 @@ app.set('views', 'src/views');
 
 
 // Rutas
+const userRouter = require('./routes/userRouter');
+
 app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.get('/register', (req, res) => {
-    res.render('register');
-});
-
-app.get('/login', (req, res) => {
-    res.render('login');
-});
+// Cargamos las rutas de usuarios en '/'
+// Otra opción hubiera sido cargarlas en '/users'
+app.use('/', userRouter);
 
 app.get('/product', (req, res) => {
     res.render('productDetail');

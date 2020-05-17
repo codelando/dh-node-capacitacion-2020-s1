@@ -12,6 +12,6 @@ La versión más simple de todas, Express, **express.static()** y **res.sendFile
 
 ### [Demo 2: Organizando el código con una estructura MVC y vistas EJS](e1-02-pasaje-a-mvc)
 
-Partimos del ejemplo anterior, creamos archivos para rutas y controladores.
+Partimos del ejemplo anterior, implementamos EJS y reemplazamos **res.sendFile()** por un mucho mejor **res.render()**.
 
-Luego reemplazamos nuestro **res.sendFile()** por un mucho mejor **res.render()**
+Luego creamos archivos para rutas y controladores para organizar mejor nuestro código.
