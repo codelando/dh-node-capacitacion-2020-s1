@@ -15,3 +15,11 @@ La versión más simple de todas, Express, **express.static()** y **res.sendFile
 Partimos del ejemplo anterior, implementamos EJS y reemplazamos **res.sendFile()** por un mucho mejor **res.render()**.
 
 Luego creamos archivos para rutas y controladores para organizar mejor nuestro código.
+
+## Episodio 2:  Métodos de HTTP - CRUD vs BREAD
+
+Manipulación de entidades con Node, rutas, controladores, modelos: ¡MVC en acción!
+
+### [Demo 1: ~~CRUD~~ BREAD implementado con JSON](e2-01-json-crud)
+
+Partimos del ejemplo del último encuentro y armamos un BREAD completo usando una fuente de datos de JSON.

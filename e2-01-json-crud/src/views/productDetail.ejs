@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body class="product-detail">
+    <%- include('partials/header') %>
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns">
+                    <div class="column is-6">
+                        <figure class="image">
+                            <img src="https://static1.squarespace.com/static/558619cae4b0013b322618c8/589f5970be6594dd28a8a057/5de6cad21dbe2231b979a1d5/1576696050804/IMG_0307.PNG" alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-6">
+                        <h1>Título del sticker</h1>
+                        <h2>$ 123.45</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident voluptatum vitae sint corporis, quaerat temporibus dignissimos est vero commodi sunt, ratione assumenda nesciunt delectus ut reiciendis consequuntur placeat labore odio.</p>
+                        <p class="tags">
+                            <span class="tag">tag 1</span>
+                            <span class="tag">tag 2</span>
+                            <span class="tag">tag 3</span>
+                            <span class="tag">tag 4</span> 
+                        </p>
+                        <form action="/products/cart">
+                            <p>Cantidad: <input type="number" value="1"></p>
+                            <p>
+                                <button type="submit">Agregar al carrito</button>
+                            </p>
+                        </form>
+                        <a href="" class="button is-success">Editar</a>
+                        <button type="submit" class="button is-danger">Borrar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>
