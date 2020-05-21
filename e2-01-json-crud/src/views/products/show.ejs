@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %> 
+<body>
+    <%- include('../partials/header') %> 
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns">
+                    <div class="column is-6">
+                        <figure class="image">
+                            <img src="/images/products/<%= product.image %>" alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-6">
+                        <h1><%= product.name %></h1>
+                        <h2>$ <%= product.price %></h2>
+                        <p><%= product.description %></p>
+                        <p class="tags">
+                            <% product.keywords.forEach((keyword) => { %> 
+                                <span class="tag"><%= keyword %> </span>
+                            <%}) %>
+                        </p>
+                        <form action="">
+                            <p>Cantidad: <input type="number" value="1"></p>
+                            <p class="buttons">
+                                <button class="button" type="submit">Agregar al carrito</button>
+                            </p>
+                        </form>
+                        <a href="/products/<%= product.id %>/edit" class="button is-success">Editar</a>
+                        <form class="form is-inline" action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="button is-danger">Borrar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>

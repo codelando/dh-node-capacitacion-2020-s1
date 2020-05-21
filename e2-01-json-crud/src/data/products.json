@@ -1,25 +1,12 @@
 [
  {
-  "name": "Ceratotherium simum simun",
-  "description": "dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam",
-  "price": "874.05",
-  "image": "product_2.png",
-  "thematic": "Tools",
-  "keywords": [
-   "Bravo",
-   "Oscar",
-   "Uniform"
-  ],
-  "id": "2"
- },
- {
-  "name": "Climacteris melanura",
+  "name": "Climacteris melanura fdafsa",
   "description": "metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam",
   "price": "1105.22",
   "image": "product_1.png",
   "thematic": "Beauty",
   "keywords": [
-   "Whiskey",
+   "Ron",
    "Kilo",
    "X-ray"
   ],
@@ -623,5 +610,18 @@
    "X-ray",
    "Uniform"
   ]
+ },
+ {
+  "name": "Nuevo producto",
+  "description": "Nuevo producto",
+  "price": "123421",
+  "image": "blue-shoe.jpg",
+  "thematic": "asdfads",
+  "keywords": [
+   "uno",
+   "dos",
+   "tres"
+  ],
+  "id": 51
  }
 ]

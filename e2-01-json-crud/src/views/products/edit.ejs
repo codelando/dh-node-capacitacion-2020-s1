@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %> 
+<body>
+    <%- include('../partials/header') %> 
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <h1>Editar producto</h1>
+                        <form action="/products/<%= locals.product && product.id %>?_method=PUT" method="POST">
+
+                            <div class="field">
+                                <label for="name">Nombre</label>
+                                <div class="control">
+                                    <input type="text" name="name" value="<%= locals.product ? product.name : '' %>">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="description">Descripción</label>
+                                <div class="control">
+                                    <textarea name="description"><%= locals.product ? product.description : '' %></textarea>
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="price">Precio</label>
+                                <div class="control">
+                                    <input type="text" name="price" value="<%= locals.product ? product.price : '0' %>">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="image">Imagen</label>
+                                <div class="control">
+                                    <input type="file" name="image">
+                                    <input type="hidden" name="oldImage" value="<%= locals.product ? product.image : '0' %>">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="thematic">Temática</label>
+                                <div class="control">
+                                    <input type="text" name="thematic" value="<%= locals.product ? product.thematic : '' %>">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="keywords">Etiquetas</label>
+                                <div class="control">
+                                    <input type="text" name="keywords" value="<%= locals.product ? product.keywords : '' %>">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit">Actualizar producto</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>
