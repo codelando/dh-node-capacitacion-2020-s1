@@ -23,3 +23,11 @@ Manipulación de entidades con Node, rutas, controladores, modelos: ¡MVC en acc
 ### [Demo 1: ~~CRUD~~ BREAD implementado con JSON](e2-01-json-crud)
 
 Partimos del ejemplo del último encuentro y armamos un BREAD completo usando una fuente de datos de JSON.
+
+## Episodio 3:  Middlewares y subida de archivos con Multer
+
+¿Qué son los middlewares y para qué se usan? ¿Cómo podemos manejar subidas de archivos?
+
+### [Demo 1: Middlewares de aplicación y de rutas(e3-01-middlewares)
+
+Partimos del ejemplo anterior e implementamos middlewares de aplicación y de rutas
