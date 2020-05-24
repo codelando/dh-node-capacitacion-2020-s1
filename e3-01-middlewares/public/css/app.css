@@ -324,3 +324,22 @@ footer h3 { text-align: center; }
 
 .cart-list .cart-item .column:first-child { text-align: center; }
 .cart-list .columns .column:last-child { text-align: right; }
+
+
+/* Página de mantenimiento */
+
+.maintenance-hero {
+    position: relative;
+}
+
+.maintenance-hero h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: .5rem 0;
+    color: white;
+    text-align: center;
+    background-color: rgba(255,255,255,0.3);
+}
