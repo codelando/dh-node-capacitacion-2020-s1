@@ -28,6 +28,6 @@ Partimos del ejemplo del último encuentro y armamos un BREAD completo usando un
 
 ¿Qué son los middlewares y para qué se usan? ¿Cómo podemos manejar subidas de archivos?
 
-### [Demo 1: Middlewares de aplicación y de rutas(e3-01-middlewares)
+### [Demo 1: Middlewares de aplicación y de rutas](e3-01-middlewares)
 
 Partimos del ejemplo anterior e implementamos middlewares de aplicación y de rutas

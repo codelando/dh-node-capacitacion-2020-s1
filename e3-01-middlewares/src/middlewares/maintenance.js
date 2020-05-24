@@ -1,5 +1,7 @@
 module.exports = (req, res, next) => {
-    return res.status(503).render('503');
+    if (process.env.MAINTENANCE_MODE === '1') {
+        return res.status(503).render('503');
+    }
 
     next();
 };

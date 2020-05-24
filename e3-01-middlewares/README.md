@@ -51,6 +51,8 @@ Requerimos el módulo y utilizamos `app.use()` para implementarlo.
 
 **Importante:** como nuestra vista require imágenes y CSS, debemos implementar nuestro middleware después de el middleware de `express.static()`.
 
+En `src/app.js`:
+
 ```javascript
 ...
 
@@ -70,11 +72,58 @@ app.use(maintenance);
 
 En este caso por ejemplo para el formulario de creación de productos.
 
+En `src/routes/productRouter.js`:
 
 ```javascript
 ...
+const maintenance = require('../middlewares/maintenance');
 
+...
 
+router.get('/create', maintenance, controller.create);
 
 ...
 ```
+
+### 6. Implementamos un archivo de configuración
+
+Para mejorar nuestro middleware vamos a permitir que se pueda configurar si el portal está o no en mantenimiento.
+
+Instalamos **dotenv**
+
+```
+npm i dotenv
+```
+
+Creamos el archivo **.env** en el raiz del proyecto y agregamos una variable que marque si el portal está en modo de mantenimiento.
+
+```
+MAINTENANCE_MODE=0
+```
+
+Implementamos el módulo y el archivo de configuración en **app.js**
+
+```
+const dotenv = require('dotenv');
+dotenv.config();
+```
+
+A partir de este momento podremos acceder a todas las constantes de nuestro archivo **.env** en el objeto `process.env`.
+
+### 6. Modificamos nuestro middleware para que tome la configuración.
+
+Tomamos como referencia nuestra constante, ojo que todo lo que viene de **dotenv** es un string.
+
+Si el valor de nuestra constante es '1', entonces mostraremos la página de mantenimiento, de lo contrario ejecutamos `next()` para seguir al siguiente paso.
+
+```javascript
+module.exports = (req, res, next) => {
+    if (process.env.MAINTENANCE_MODE === '1') {
+        return res.status(503).render('503');
+    }
+
+    next();
+};
+```
+
+**Importante:** Los valores de los archivos **.env** se leen al momento de arrancar nuestra aplicación. Si los cambiamos, tenemos que reiniciarla para que los cambios tomen efecto.

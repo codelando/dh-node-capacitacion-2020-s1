@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
-const maintenance = require('./middlewares/maintenance');
+const dotenv = require('dotenv');
+dotenv.config();
+
+// const maintenance = require('./middlewares/maintenance');
 
 // Vistas y recursos estáticos
 app.use(express.static('public'));
@@ -9,7 +12,7 @@ app.set('view engine', 'ejs');
 app.set('views', 'src/views');
 
 // Sitio en mantenimiento
-app.use(maintenance);
+// app.use(maintenance);
 
 // Formularios
 app.use(express.urlencoded({extended: false}));

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/productController');
+const maintenance = require('../middlewares/maintenance');
 
 
 // Listado de productos (GET)
@@ -10,7 +11,7 @@ router.get('/', controller.index);
 router.get('/cart', controller.cart);
 
 // Formulario de creación de productos (GET)
-router.get('/create', controller.create);
+router.get('/create', maintenance, controller.create);
 
 // Detalle de un producto particular (GET)
 router.get('/:id', controller.show);
