@@ -30,8 +30,12 @@ Partimos del ejemplo del último encuentro y armamos un BREAD completo usando un
 
 ### [Demo 1: Middlewares de aplicación y de rutas](e3-01-middlewares)
 
-Partimos del ejemplo anterior e implementamos middlewares de aplicación y de rutas
+Partimos del ejemplo anterior e implementamos middlewares de aplicación y de rutas.
 
 ### [Demo 2: Subida de archivos con Multer](e3-02-multer)
 
-Partimos del ejemplo anterior e implementamos middlewares de aplicación y de rutas
+Partimos del ejemplo del último encuentro y agregamos subida de archivos.
+
+### [Demo 3: Anidación de middlewares](e3-03-anidado-de-middlewares)
+
+Una demostración de que los middlewares se ejecutan uno dentro del otro y lugar de ejecutarse uno después del otro.
