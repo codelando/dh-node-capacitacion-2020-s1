@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %> 
+<body class="register">
+    <%- include('partials/header') %> 
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <h1>Registro</h1>
+                        <form action="">
+                            <div class="columns">
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label for="firstName">Nombre</label>
+                                        <div class="control">
+                                            <input type="text" name="firstName">
+                                        </div>
+                                        <p class="feedback"></p>
+                                    </div>
+                                </div>
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label for="lastName">Apellido</label>
+                                        <div class="control">
+                                            <input type="text" name="lastName">
+                                        </div>
+                                        <p class="feedback"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <div class="control">
+                                    <input type="text" name="email" class="is-success">
+                                </div>
+                                <p class="feedback is-success">El email está disponible</p>
+                            </div>
+                            <div class="field">
+                                <label for="email">Contraseña</label>
+                                <div class="control">
+                                    <input type="text" name="password">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+                            <div class="field">
+                                <label for="email">Repetir Contraseña</label>
+                                <div class="control">
+                                    <input type="text" name="password" class="is-danger">
+                                </div>
+                                <p class="feedback is-danger">La contraseña no coincide</p>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit">Registrarme</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include('partials/footer') %> 
+</body>
+</html>

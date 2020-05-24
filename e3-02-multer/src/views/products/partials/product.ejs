@@ -1,0 +1,15 @@
+<div class="column is-4 is-3-desktop product">
+    <a href="/products/<%= product.id %>">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image">
+                    <img src="/images/products/<%= product.image %>" alt="">
+                </figure>
+            </div>
+            <div class="card-content">
+                <p class="title"><%= product.name %></p>
+                <p class="subtitle">$ <%= product.price %></p>
+            </div>
+        </div>
+    </a>
+</div>
