@@ -39,3 +39,11 @@ Partimos del ejemplo del último encuentro y agregamos subida de archivos.
 ### [Demo 3: Anidación de middlewares](e3-03-anidado-de-middlewares)
 
 Una demostración de que los middlewares se ejecutan uno dentro del otro y lugar de ejecutarse uno después del otro.
+
+## Episodio 4:  Sesiones, cookies, registro y login
+
+Vamos a ver cómo funcionan las sessiones las cookies y cómo podemos armar un registro y login completo con ellas.
+
+### [Demo 1: Registro y login con todos los chiches](e4-01-session-cookies-login)
+
+Demostración funcional de login, registro y funcionalidad de recordar al usuario usando JSON como fuente de datos.
