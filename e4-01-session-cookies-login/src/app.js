@@ -1,23 +1,23 @@
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
-const dotenv = require('dotenv');
-dotenv.config();
-
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const auth = require('./middlewares/auth');
 
 // Vistas y recursos estáticos
 app.use(express.static('public'));
-
-app.use((req, res, next) => {
-    if (process.env.MAINTENANCE_MODE === 1) {
-        res.status(503).render('503');
-    }
-
-    next();
-})
-
 app.set('view engine', 'ejs');
 app.set('views', 'src/views');
+
+// Sesiones y cookies
+app.use(session({
+    secret: 'sticker wizzard',
+    resave: false,
+    saveUninitialized: true,
+}));
+app.use(cookieParser());
+app.use(auth);
 
 // Formularios
 app.use(express.urlencoded({extended: false}));
@@ -29,7 +29,7 @@ const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
 
 app.use('/', indexRouter);
-app.use('/', userRouter);
+app.use('/users', userRouter);
 app.use('/products', productRouter);
 
 // Iniciamos el servidor

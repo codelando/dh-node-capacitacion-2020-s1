@@ -8,12 +8,22 @@
                 <a class="menu-home" href="/products">Productos</a>
                 <a class="menu-product-detail" href="/products/detail">Detalle</a>
                 <a class="menu-product-new" href="/products/create">Nuevo</a>
-                <a class="menu-login" href="/login">Login</a>
-                <a class="menu-register" href="/register">Registro</a>
             </div>
             <div class="nav-cart">
                 <a href="/products/cart">
-                    <i class="fas fa-shopping-cart"></i>
+                    <% if (user) { %>
+                        <a class="menu-profile" href="/users/profile">
+                        <img src="/images/users/<%= user.image || '404.png' %>" alt="">
+                        <%= user.firstName %>
+                    </a>
+                        <form action="/users/logout" method="POST" class="form is-inline">
+                            <a class="menu-logout" onclick="this.closest('form').submit();return false;"><i class="fas fa-sign-out-alt"></i></a>
+                        </form>
+                    <% } else { %>
+                        <a class="menu-login" href="/users/login">Login</a>
+                        <a class="menu-register" href="/users/register">Registro</a>
+                    <% } %>
+                        <i class="fas fa-shopping-cart"></i>
                     <span class="cart-items-qty">0</span>
                 </a>
             </div>

@@ -147,7 +147,7 @@ button.is-danger,
 
 .buttons .button { margin-right: var(--default-margin);}
 
-input,
+input:not([type='checkbox']):not([type='radio']),
 textarea,
 select { width: 100%; }
 
@@ -255,27 +255,36 @@ a {
         flex-grow: 1;
         text-align: center;
     }
-        .main-nav .nav-menu a { 
+        .main-nav .nav-menu a,
+        .main-nav .nav-cart a { 
             padding: 1rem;
             text-transform: uppercase;
         }
 
-        .main-nav .nav-menu a:hover {
+        .main-nav .nav-menu a:hover,
+        .main-nav .nav-cart a:hover {
             border-bottom: .5rem solid var(--light);
         }
 
         body.home .main-nav .menu-home,
         body.products .main-nav .menu-products,
         body.product-new .main-nav .menu-product-new,
-        body.product-detail .main-nav .menu-product-detail,
         body.login .main-nav .menu-login,
-        body.register .main-nav .menu-register {
+        body.register .main-nav .menu-register,
+        body.profile .main.nav .menu-profile,
+        body.cart .main.nav .menu-cart {
             border-bottom: .5rem solid var(--primary);
         }
 
     .main-nav .nav-cart {
         text-align: right;
         width: 25%;
+    }
+
+    .main-nav .menu-profile img { 
+        max-width: 1rem;
+        margin-right: var(--default-margin);
+        border-radius: 50%;
     }
 
 footer {
@@ -324,22 +333,3 @@ footer h3 { text-align: center; }
 
 .cart-list .cart-item .column:first-child { text-align: center; }
 .cart-list .columns .column:last-child { text-align: right; }
-
-
-/* Página de mantenimiento */
-
-.maintenance-hero {
-    position: relative;
-}
-
-.maintenance-hero h1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: 0;
-    padding: .5rem 0;
-    color: white;
-    text-align: center;
-    background-color: rgba(255,255,255,0.3);
-}

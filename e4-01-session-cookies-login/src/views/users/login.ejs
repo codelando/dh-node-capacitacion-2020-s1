@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head') %> 
+<%- include('../partials/head') %> 
 <body class="login">
-    <%- include('partials/header') %> 
+    <%- include('../partials/header') %> 
     <main>
         <div class="container">
             <section>
                 <div class="columns is-centered is-vcentered">
                     <div class="column is-6">
-                        <form action="">
+                        <form action="/users/login" method="POST">
                             <h2>Ingresa tus datos</h2>
                             <div class="field">
                                 <label for="email">Email</label>
                                 <div class="control">
-                                    <input type="text" name="email" class="is-success">
+                                    <input type="text" name="email" id="email" class="<%= locals.errors && errors.email ? 'is-danger' : '' %> " value="<%= locals.old && old.email %> ">
                                 </div>
-                                <p class="feedback is-success">El email está disponible</p>
+                                <% if(locals.errors && errors.email) { %>
+                                    <p class="feedback is-danger"><%= errors.email %> </p>
+                                <% } %> 
                             </div>
                             <div class="field">
-                                <label for="email">Contraseña</label>
+                                <label for="password">Contraseña</label>
                                 <div class="control">
-                                    <input type="text" name="password">
+                                    <input type="password" name="password" id="password">
                                 </div>
                                 <p class="feedback"></p>
+                            </div>
+                            <div class="field">
+                                <label for="remember">Recordar mis datos</label>
+                                <div class="control">
+                                    <input type="checkbox" name="remember" id="remember">
+                                </div>
                             </div>
                             <div class="field">
                                 <div class="control">
@@ -35,6 +43,6 @@
             </section>
         </div>
     </main>
-    <%- include('partials/footer') %> 
+    <%- include('../partials/footer') %> 
 </body>
 </html>

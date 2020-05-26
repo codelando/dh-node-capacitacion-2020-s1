@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head') %> 
+<%- include('../partials/head') %> 
 <body class="register">
-    <%- include('partials/header') %> 
+    <%- include('../partials/header') %> 
     <main>
         <div class="container">
             <section>
                 <div class="columns is-centered">
                     <div class="column is-6">
                         <h1>Registro</h1>
-                        <form action="">
+                        <form action="/users" method="POST" enctype="multipart/form-data">
                             <div class="columns">
                                 <div class="column is-6">
                                     <div class="field">
@@ -33,23 +33,32 @@
                             <div class="field">
                                 <label for="email">Email</label>
                                 <div class="control">
-                                    <input type="text" name="email" class="is-success">
+                                    <input type="text" name="email">
                                 </div>
-                                <p class="feedback is-success">El email está disponible</p>
+                                <p class="feedback"></p>
+                            </div>
+                            <div class="field">
+                                <label for="image">Imagen</label>
+                                <div class="control">
+                                    <input type="file" name="image" id="image"  class="<%= locals.errors && errors.image ? 'is-danger' : '' %> ">
+                                </div>
+                                <% if(locals.errors && errors.image) { %>
+                                    <p class="feedback is-danger"><%= errors.image %> </p>
+                                <% } %> 
                             </div>
                             <div class="field">
                                 <label for="email">Contraseña</label>
                                 <div class="control">
-                                    <input type="text" name="password">
+                                    <input type="password" name="password">
                                 </div>
                                 <p class="feedback"></p>
                             </div>
                             <div class="field">
                                 <label for="email">Repetir Contraseña</label>
                                 <div class="control">
-                                    <input type="text" name="password" class="is-danger">
+                                    <input type="password" name="repassword">
                                 </div>
-                                <p class="feedback is-danger">La contraseña no coincide</p>
+                                <p class="feedback"></p>
                             </div>
                             <div class="field">
                                 <div class="control">
@@ -62,6 +71,6 @@
             </section>
         </div>
     </main>
-    <%- include('partials/footer') %> 
+    <%- include('../partials/footer') %> 
 </body>
 </html>
