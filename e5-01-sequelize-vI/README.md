@@ -59,7 +59,7 @@ Ahora, inicializaremos las carpetas y archivos base que necesitamos para comenza
 const path = require('path');
 
 module.exports = {
-	config: path.resolve('./src/database/config'),
+	config: path.resolve('./src/database/config', 'config.js'),
 	'models-path': path.resolve('./src/database/models'),
 	'seeders-path': path.resolve('./src/database/seeders'),
 	'migrations-path': path.resolve('./src/database/migrations'),
@@ -94,7 +94,7 @@ Este comando creará dentro de la carpeta `/src` una sub-carpeta llamada `/datab
 │   ├── app.js
 │   └── database
 │       └── config
-│           └── config.json
+│           └── config.js
 │       └── migrations
 │       └── models
 │           └── index.js
@@ -106,11 +106,12 @@ Este comando creará dentro de la carpeta `/src` una sub-carpeta llamada `/datab
 Entendiendo que las carpetas **migrations** y **seeders** estarán vacías. Dentro del archivo `config.js` la estructura del mismo deberá configurarse así:
 
 ```js
-{
+module.exports = {
   "development": {
     "username": DB_USER, // ← Usuario de la DB
     "password": DB_PASS, // ← Contraseña del usuario de la DB
     "database": DB_NAME, // ← Nombre de la DB previamente creada
+    "port": DB_PORT, // ← Nombre de la DB previamente creada
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
