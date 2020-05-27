@@ -1,0 +1,31 @@
+16:15:45	 De juanCarlos : ya vengo
+16:21:07	 De Ezequiel Cortés - Digital House : https://www.npmjs.com/package/sequelize-cli
+16:35:53	 De Ezequiel Cortés - Digital House : 
+npx va a descargar el paquete en el momento y lo va a ejecutar.
+16:50:29	 De Ezequiel Cortés - Digital House : 
+https://sequelize.org/master/manual/migrations.html#the--code--sequelizerc--code--file
+16:57:56	 De Ezequiel Cortés - Digital House : Conectores
+
+ npm install --save pg pg-hstore # Postgres
+$ npm install --save mysql2
+$ npm install --save mariadb
+$ npm install --save sqlite3
+$ npm install --save tedious # Microsoft SQL Server
+16:58:23	 De Ezequiel Cortés - Digital House : 
+https://sequelize.org/master/manual/getting-started.html
+17:12:16	 De Ezequiel Cortés - Digital House : 
+rawQuery = "caca";
+17:13:14	 De juanCarlos : JAAJAJAJA, no digas esoooo
+17:13:47	 De Ezequiel Cortés - Digital House : Use el ORM como un adulto. Nada de raw queries.
+17:14:06	 De Santiago argilla : en singular y mate amargo
+17:14:37	 De juanCarlos : NOOOOO jejejeje, es joda
+17:16:50	 De Santiago argilla : jajaj
+17:49:09	 De Federico Garcia : and y or
+17:59:25	 De Federico Garcia : jajjaa
+18:02:15	 De Ezequiel Cortés - Digital House : Voy saliendo.
+18:02:23	 De Ezequiel Cortés - Digital House : Muy buena clase JAVI!
+18:03:24	 De Federico Garcia : yo también me voy.. sale clase en instantes.. saludos a todos.
+18:07:00	 De Javi Herrera - Host : https://forms.gle/eMRZ ER2ULaSZiQ7h9
+18:07:08	 De Javi Herrera - Host : https://docs.google.com/forms/d/e/1FAIpQLSeOLFsjN9h7DmPvcRvzFEPMgEPN1YHo3JSR_NBzO-xPZAADIQ/viewform
+18:07:17	 De Santiago argilla : de 10\
+18:07:19	 De Santiago argilla : nos vemos!

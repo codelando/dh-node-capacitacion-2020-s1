@@ -47,3 +47,11 @@ Vamos a ver cómo funcionan las sessiones las cookies y cómo podemos armar un r
 ### [Demo 1: Registro y login con todos los chiches](e4-01-session-cookies-login)
 
 Demostración funcional de login, registro y funcionalidad de recordar al usuario usando JSON como fuente de datos.
+
+## Episodio 4:  Sequelize vI - Configuración, modelos y operadores
+
+Cómo se configura Sequelize dentro de un proyecto de express. Creando modelos y entendiendo los operadores.
+
+### [Demo 1: Configuración inicial de Sequelize](e5-01-sequelize-vI)
+
+Demostración funcional de Sequelize con nuestra DB MySQL.

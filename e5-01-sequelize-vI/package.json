@@ -1,0 +1,22 @@
+{
+  "name": "sequelize-demo",
+  "version": "1.0.0",
+  "description": "Demo de sequelize con Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "startdev": "nodemon -L src/app.js -e js,ejs"
+  },
+  "author": "Javier Herrera",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
