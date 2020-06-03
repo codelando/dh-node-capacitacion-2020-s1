@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %> 
+<body class="product-new">
+    <%- include('../partials/header') %> 
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <h1>Nuevo producto</h1>
+                        <form action="/products" method="POST" enctype="multipart/form-data">
+
+                            <div class="field">
+                                <label for="name">Nombre</label>
+                                <div class="control">
+                                    <input type="text" name="name">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="description">Descripción</label>
+                                <div class="control">
+                                    <textarea name="description"></textarea>
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+                            
+                            <div class="field">
+                                <label for="description">Marca</label>
+                                <div class="control">
+                                    <select name="brandId">
+                                        <% brands.forEach(oneBrand => { %>
+                                         <option value="<%= oneBrand.id %>"><%= oneBrand.name %> </option>
+                                        <% }) %>
+                                    </select>
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="price">Precio</label>
+                                <div class="control">
+                                    <input type="text" name="price">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="image">Imagen</label>
+                                <div class="control">
+                                    <input type="file" name="image">
+                                </div>
+                            </div>
+
+                            <!-- <div class="field">
+                                <label for="thematic">Temática</label>
+                                <div class="control">
+                                    <input type="text" name="thematic">
+                                </div>
+                                <p class="feedback"></p>
+                            </div> -->
+
+                            <div class="field">
+                                <label for="keywords">Etiquetas <i>(separadas por espacio)</i></label>
+                                <div class="control">
+                                    <input type="text" name="keywords">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit">Crear producto</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>
