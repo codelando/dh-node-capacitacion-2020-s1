@@ -48,10 +48,18 @@ Vamos a ver cómo funcionan las sessiones las cookies y cómo podemos armar un r
 
 Demostración funcional de login, registro y funcionalidad de recordar al usuario usando JSON como fuente de datos.
 
-## Episodio 4:  Sequelize vI - Configuración, modelos y operadores
+## Episodio 5:  Sequelize vI - Configuración, modelos y operadores
 
 Cómo se configura Sequelize dentro de un proyecto de express. Creando modelos y entendiendo los operadores.
 
 ### [Demo 1: Configuración inicial de Sequelize](e5-01-sequelize-vI)
 
 Demostración funcional de Sequelize con nuestra DB MySQL.
+
+## Episodio 6:  Sequelize vII - Relations - belongsTo y hasMany
+
+Demostración de como trabajar con relaciones y la importancia de las mismas
+
+### [Demo 1:Relaciones belongsTo y hasMany](e6-01-sequelize-vII)
+
+Demostración funcional de las relaciones en Sequelize.
