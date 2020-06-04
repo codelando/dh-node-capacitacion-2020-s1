@@ -1,0 +1,19 @@
+{
+  "name": "e7-01-sequelize-vIII",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.11"
+  }
+}

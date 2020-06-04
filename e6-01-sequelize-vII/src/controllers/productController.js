@@ -31,7 +31,8 @@ module.exports = {
     },
     create: async (req, res) => {
         let brands = await Brand.findAll();
-        return res.render('products/create', { brands });
+        let colors = await Color.findAll();
+        return res.render('products/create', { brands, colors });
     },
 
     store: (req, res) => {
@@ -39,38 +40,37 @@ module.exports = {
         _body.image = req.file ? req.file.filename : '';
         _body.userId = Math.ceil(Math.random() * 3);
 
-        // return res.send(_body);
-
         Product
             .create(req.body)
             .then(productStored => {
-                res.redirect(`products/${productStored.id}`);
+                // Asociar los colores que querés al producto creado
+                productStored.addColors(req.body.colors);
+
+                return res.redirect(`products/${productStored.id}`);
             })
             .catch(error => res.send(error));
     },
 
-    edit: (req, res) => {
-        let product = productModel.find(req.params.id);
-        
-        if(product) {
-            product.keywords = product.keywords.join(' ');
-            res.render('products/edit', { product });
-        } else {
-            res.render('products/404');
-        }
+    edit: async (req, res) => {
+        let brands = await Brand.findAll();
+        let colors = await Color.findAll();
+        let product = await Product.findByPk(req.params.id, { include: ['brand', 'colors'] });
+        return res.render('products/edit', { product, colors, brands });
     },
     update: (req, res) => {
-        product = req.body;
-        product.id = req.params.id;
+        let product = req.body;
         
         product.image = req.file ? req.file.filename : req.body.oldImage;
-        delete product.oldImage;
 
-        product.keywords = product.keywords.split(' ');
+        Product.update(product, {
+            where: {id: req.params.id}
+        })
+        .then(result => {
+            return res.redirect(`/products/${req.params.id}`);
+        })
+        .catch(error => res.send(error));
+
         
-        productId = productModel.update(product);
-
-        res.redirect(`/products/${productId}`)
     },
     destroy: async (req, res) => {
         await Product.destroy({ where: {id: req.params.id}});

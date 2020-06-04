@@ -40,6 +40,18 @@
                             </div>
 
                             <div class="field">
+                                <label for="description">Colores <i>(elegí varios pulsando la tecla control)</i></label>
+                                <div class="control">
+                                    <select name="colors" multiple>
+                                        <% colors.forEach(oneColor => { %>
+                                         <option value="<%= oneColor.id %>"><%= oneColor.name %> </option>
+                                        <% }) %>
+                                    </select>
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
                                 <label for="price">Precio</label>
                                 <div class="control">
                                     <input type="text" name="price">

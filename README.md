@@ -60,6 +60,14 @@ Demostración funcional de Sequelize con nuestra DB MySQL.
 
 Demostración de como trabajar con relaciones y la importancia de las mismas
 
-### [Demo 1:Relaciones belongsTo y hasMany](e6-01-sequelize-vII)
+### [Demo 1: Relaciones belongsTo, hasMany, belongsToMany](e6-01-sequelize-vII)
 
 Demostración funcional de las relaciones en Sequelize.
+
+## Episodio 7:  Sequelize vIII - Relations - Migrations + Seeders
+
+Como crear tablas y popular las mismas con Sequelize
+
+### [Demo 1: Haciendo migraciones y seeders con Sequelize](e7-01-sequelize-vIII)
+
+Creando tablas e insertando datos desde la terminal con Sequelize
