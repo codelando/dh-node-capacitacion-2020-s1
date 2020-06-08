@@ -1,0 +1,34 @@
+<header>
+    <div class="container">
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <a href="/" class="logo">StickerWizard</a>
+            </div>
+            <div class="nav-menu">
+                <a class="menu-home" href="/">Home</a>
+                <a class="menu-products" href="/products">Stikers</a>
+                <%# @TODO verificar que sea admin %> 
+                <% if (locals.user) { %>
+                    <a class="menu-product-new" href="/products/create">Nuevo</a>
+                <% } %> 
+     
+            </div>
+            <div class="nav-cart">
+                <% if (!locals.user) { %>
+                    <a class="menu-login" href="/users/login">Login</a>
+                    <a class="menu-register" href="/users/register">Registro</a>
+                <% } else { %>
+                    <a class="menu-profile" href="/users/profile">
+                        <img src="/images/users/<%= user.image || '404.png' %>" alt="">
+                        <%= user.firstName %>
+                    </a>
+                    <a class="menu-logout" href="/users/logout"><i class="fas fa-sign-out-alt"></i></a>
+                <% }  %> 
+                <a class="menu-cart" href="/products/cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-items-qty">0</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>

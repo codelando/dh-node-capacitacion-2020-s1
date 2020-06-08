@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %> 
+<body class="register">
+    <%- include('../partials/header') %> 
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <h1>Registro</h1>
+                        <form action="/users" method="POST" enctype="multipart/form-data">
+                            <div class="columns">
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label for="firstName">Nombre</label>
+                                        <div class="control">
+                                            <input type="text" name="firstName">
+                                        </div>
+                                        <p class="feedback"></p>
+                                    </div>
+                                </div>
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label for="lastName">Apellido</label>
+                                        <div class="control">
+                                            <input type="text" name="lastName">
+                                        </div>
+                                        <p class="feedback"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <div class="control">
+                                    <input type="text" name="email" id="email" class="<%= locals.errors && errors.email ? 'is-danger' : '' %> " value="<%= locals.errors && errors.value('email') %>">
+                                </div>
+                                <% if(locals.errors && errors.has('email')) { %>
+                                    <p class="feedback is-danger"><%= errors.msg('email') %> </p>
+                                <% } %>
+                            </div>
+                            <div class="field">
+                                <label for="image">Imagen</label>
+                                <div class="control">
+                                    <input type="file" name="image" id="image">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="email">Contraseña</label>
+                                <div class="control">
+                                    <input type="password" name="password" id="password" class="<%= locals.errors && errors.password ? 'is-danger' : '' %> " value="<%= locals.errors && errors.value('password') %>">                                </div>
+                                <% if(locals.errors && errors.has('password')) { %>
+                                    <p class="feedback is-danger"><%= errors.msg('password') %> </p>
+                                <% } %>                            </div>
+                            <div class="field">
+                                <label for="email">Repetir Contraseña</label>
+                                <div class="control">
+                                    <input type="password" name="repassword">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit">Registrarme</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>

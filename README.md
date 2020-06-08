@@ -71,3 +71,11 @@ Como crear tablas y popular las mismas con Sequelize
 ### [Demo 1: Haciendo migraciones y seeders con Sequelize](e7-01-sequelize-vIII)
 
 Creando tablas e insertando datos desde la terminal con Sequelize
+
+## Episodio 8:  Validaciones de backend
+
+Validación de formularios con Express Validator y Multer
+
+### [Demo 1: Validando con Express Validator y Multer](e8-01-express-validator-multer)
+
+Ejemplo de validación usando Express Validator y Multer

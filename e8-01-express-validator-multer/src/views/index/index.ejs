@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %> 
+<body class="home">
+    <%- include('../partials/header') %> 
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-multiline product-list">
+                    <% products.forEach(product => { %>
+                        <%- include('../products/partials/product', { product }) %> 
+                    <% }); %>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>

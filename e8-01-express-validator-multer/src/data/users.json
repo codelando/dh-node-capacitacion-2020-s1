@@ -1,0 +1,100 @@
+[
+ {
+  "id": 1,
+  "firstName": "Bjorn",
+  "lastName": "Hoonahan",
+  "email": "bhoonahan0@pagesperso-orange.fr",
+  "password": "qF64bDeKDZl",
+  "category": "user",
+  "image": "user_1.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "Rockey",
+  "lastName": "Prester",
+  "email": "rprester1@wikia.com",
+  "password": "h94aYhZ0aX7N",
+  "category": "user",
+  "image": "user_2.jpg"
+ },
+ {
+  "id": 3,
+  "firstName": "Rees",
+  "lastName": "Sleet",
+  "email": "rsleet2@senate.gov",
+  "password": "q9VEs9ZPYCD",
+  "category": "user",
+  "image": "user_3.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "Xymenes",
+  "lastName": "Cuthill",
+  "email": "xcuthill3@hexun.com",
+  "password": "GtHGkVn",
+  "category": "user",
+  "image": "user_4.jpg"
+ },
+ {
+  "id": 5,
+  "firstName": "Winslow",
+  "lastName": "Huet",
+  "email": "whuet4@live.com",
+  "password": "zaqitOfEy",
+  "category": "user",
+  "image": "user_5.jpg"
+ },
+ {
+  "id": 6,
+  "firstName": "Vale",
+  "lastName": "Ferriday",
+  "email": "vferriday5@guardian.co.uk",
+  "password": "jNcyBKNc3",
+  "category": "user",
+  "image": "user_6.jpg"
+ },
+ {
+  "id": 7,
+  "firstName": "Virginia",
+  "lastName": "Myner",
+  "email": "vmyner6@xrea.com",
+  "password": "TQ9nKk",
+  "category": "user",
+  "image": "user_7.jpg"
+ },
+ {
+  "id": 8,
+  "firstName": "Guthrey",
+  "lastName": "Mercy",
+  "email": "gmercy7@networksolutions.com",
+  "password": "bbwlItj",
+  "category": "user",
+  "image": "user_8.jpg"
+ },
+ {
+  "id": 9,
+  "firstName": "Ynez",
+  "lastName": "Donativo",
+  "email": "ydonativo8@wisc.edu",
+  "password": "pWsUsWGp",
+  "category": "user",
+  "image": "user_9.jpg"
+ },
+ {
+  "id": 10,
+  "firstName": "Adolpho",
+  "lastName": "Brackenridge",
+  "email": "abrackenridge9@soup.io",
+  "password": "ec6osuJ5nn",
+  "category": "user",
+  "image": "user_10.jpg"
+ },
+ {
+  "firstName": "test",
+  "lastName": "test",
+  "email": "test@test.com",
+  "password": "$2a$10$CNFyI/brQdVSHAM2ImRTw.g8hIt7aMVp9OmV8/vQMOceewpAex7oK",
+  "category": "user",
+  "id": 11
+ }
+]
