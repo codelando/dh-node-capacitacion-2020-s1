@@ -96,6 +96,6 @@ Ejemplo de stateful components & event handlers
 Ciclo de vida de componentes
 API's request
 
-### [Demo 1: Star Wars App](e9-11-01-react-vI-vIII)
+### [Demo 1: Star Wars App](e11-01-react-vIII)
 
 Ejemplo de ciclo de vida con llamado a la API [http://swapi.dev](http://swapi.dev)
