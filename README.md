@@ -90,3 +90,12 @@ Event Handlers: Manejo y seteo de eventos dentro de un stateful components
 
 Ejemplo de creación de aplicación de React, componentes y props
 Ejemplo de stateful components & event handlers
+
+## Episodio 11: Life Cycle & API's Request
+
+Ciclo de vida de componentes
+API's request
+
+### [Demo 1: Star Wars App](e9-11-01-react-vI-vIII)
+
+Ejemplo de ciclo de vida con llamado a la API [http://swapi.dev](http://swapi.dev)
