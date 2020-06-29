@@ -80,10 +80,13 @@ Validación de formularios con Express Validator y Multer
 
 Ejemplo de validación usando Express Validator y Multer
 
-## Episodio 9: Introducción a React
+## Episodio 9 y 10: Introducción a React + Stateful components
 
 Setup inicial. Trabajando con componentes stateless y sus props
+Stateful components: state & setState()
+Event Handlers: Manejo y seteo de eventos dentro de un stateful components
 
-### [Demo 1: React App](e9-01-react-vI)
+### [Demo 1: React App](e9-10-01-react-vI-vII)
 
 Ejemplo de creación de aplicación de React, componentes y props
+Ejemplo de stateful components & event handlers

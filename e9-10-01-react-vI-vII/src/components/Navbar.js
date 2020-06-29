@@ -7,7 +7,7 @@ const Navbar = ({ links }) => {
 	return (
 		<nav className="navbar">
 			<ul>
-				{ links.map((link, i) => <li key={i} ><a href={link.url}> {link.text} </a></li>) }
+				{ links.map((link, i) => <li key={i}><a href={link.url}> {link.text} </a></li>) }
 			</ul>
 		</nav>
 	)

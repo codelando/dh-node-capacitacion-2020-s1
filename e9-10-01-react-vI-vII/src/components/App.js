@@ -5,6 +5,7 @@ import '../assets/css/App.css';
 import Navbar from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
+import Counter from './Counter';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
           {text: 'Stores', url: '/stores'},
         ]}
       />
+
+      <Counter initialValue={0} names={['Pepe', 'Pipo', 'Papo']} />
+      
+      <Counter initialValue={21} names={['Jon', 'Jane', 'Joe']} />
 
       <Home />
 
